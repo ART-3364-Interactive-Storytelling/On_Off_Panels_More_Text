@@ -39,23 +39,26 @@ Add a UI Image or 2D Sprite for each visual element:
 3. Position the sprite in the scene where you want it.
 
 ## Add and Assign Scripts
-Add Scripts:
 
-Place your StoryManager.cs, CatFader.cs, and Visibility.cs scripts in the Scripts folder.
-Attach Scripts:
+1. Place your StoryManager.cs, CatFader.cs, and Visibility.cs scripts in the Scripts folder.
 
-Attach StoryManager to an empty GameObject (e.g., right-click Hierarchy > Create Empty > name it GameManager).
-Attach CatFader to the CatImage GameObject.
-Attach UIImageToggle (from Visibility.cs) to any UI element you want to toggle (e.g., Fox, Sign, Portal).
-5. Link Inspector Fields
-Select the GameObject with StoryManager:
-Drag the TextMeshPro text object to the storyText field.
-Drag the left and right arrow Images to leftArrow and rightArrow.
-Drag the left and right Button components to leftButton and rightButton.
-For CatFader, drag the CatImage UI Image to the catImage field.
-For UIImageToggle, drag the relevant UI Image (e.g., Fox, Sign, Portal) to the uiImage field.
-6. Set Up OnClick Events
-Select LeftButton in the Hierarchy:
+### Attach Scripts
+
+1. Attach StoryManager to an empty GameObject (e.g., right-click ```Hierarchy > Create Empty```  name it ```GameManager```).
+2. Attach CatFader to the CatImage GameObject.
+3. Attach Visibility.cs to the ```Fox``````GameObject```.
+4. In the **Inspector** for the ```Fox``` drag the ```Image Source``` in the ```UI Image Toggle -> UI Image``` script.
+5. Select the ```GameObject``` with ```StoryManager``` in the **Hierarchy**:
+   * Drag the TextMeshPro text object named ```Text Panel``` from the **Hierarchy** to the storyText field of the ```Story Manager``` **Inspector**.
+   * Drag the left and right arrow Images to leftArrow and rightArrow.
+   * Drag the left and right Button components to leftButton and rightButton.
+     
+> [!TIP] > You can add an additional Inspector tab and drag it next to your original Inspector tab to make it easier to drag from **Inspector** to **Inspector**.
+> 
+9. For CatFader, drag the CatImage UI Image to the catImage field.
+10. For UIImageToggle, drag the relevant UI Image (e.g., Fox, Sign, Portal) to the uiImage field.
+11. Set Up OnClick Events
+12. Select LeftButton in the Hierarchy:
 
 In the Inspector, scroll to the Button component’s “OnClick()” section.
 Click the “+” to add a new event.
