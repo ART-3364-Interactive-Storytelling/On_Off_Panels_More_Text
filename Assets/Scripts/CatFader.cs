@@ -19,12 +19,17 @@ public class CatFader : MonoBehaviour
 
     IEnumerator FadeCat()
     {
-        // Fade in
-        yield return StartCoroutine(FadeTo(1f, 5f));
-        // Stay visible
-        yield return new WaitForSeconds(10f);
-        // Fade out
-        yield return StartCoroutine(FadeTo(0f, 5f));
+        while (true)
+        {
+            // Fade in
+            yield return StartCoroutine(FadeTo(1f, 5f));
+            // Stay visible
+            yield return new WaitForSeconds(5f);
+            // Fade out
+            yield return StartCoroutine(FadeTo(0f, 5f));
+            // Stay invisible
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     IEnumerator FadeTo(float targetAlpha, float duration)
